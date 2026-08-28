@@ -184,7 +184,7 @@ function Dashboard({ role, setPage }: any) {
         <div className="attention-list">{students.filter(s => s[4] !== "Active").concat(students.slice(0,2)).map((s,i)=><div className="attention" key={i}><div className="avatar warm">{s[0].split(" ").map(x=>x[0]).join("")}</div><div><b>{s[0]}</b><span>{s[1]} • {s[2]} attendance</span></div><AlertCircle size={18}/></div>)}</div>
       </div>
       <div className="card"><div className="card-head"><div><h3>Today’s sessions</h3><p>Upcoming training schedule</p></div><button className="text-btn" onClick={() => setPage("Schedule")}>Calendar</button></div>
-        {["09:30 AM — AI Fundamentals","11:00 AM — React & TypeScript","02:00 PM — Data Analytics"].map((x,i)=><div className="session-row" key={x}><span className={`session-dot c${i}`}/><div><b>{x}</b><span>{["AI Fellowship","Full Stack","Data Analytics"][i]} • Room {101+i}</span></div><Clock3 size={16}/></div>)}
+        {["09:30 AM — AI Fundamentals","11:00 AM — React & Typeipt","02:00 PM — Data Analytics"].map((x,i)=><div className="session-row" key={x}><span className={`session-dot c${i}`}/><div><b>{x}</b><span>{["AI Fellowship","Full Stack","Data Analytics"][i]} • Room {101+i}</span></div><Clock3 size={16}/></div>)}
       </div>
     </div>
   </div>
